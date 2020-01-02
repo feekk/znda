@@ -1,0 +1,78 @@
+# This is a TOML document.
+[app]
+    name = 'znda-user'
+
+[env]
+    #gin
+    ginMode = 'debug'
+    #db.LogMode
+    dbLogMode = false
+
+[http]
+    port = 8888
+    readTimeout = "3s"
+    writeTimeout = "3s"
+    # 1 << 20
+    maxHeaderBytes = 1048576
+
+[logger]
+
+[trace]
+
+[database]
+    use = true
+    [database.default]
+        driver = 'mysql'
+        name = 'mysql-rw'
+        dsn = 'root:root_123@tcp(127.0.0.1:3306)/znda?timeout=5s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8,utf8mb4'
+        maxIdle = 3
+        maxConn = 3
+        idleTimeout = '1h'
+    # [[database.connection]]
+    #     driver = 'sqlite3'
+    #     name = 'zddgo-sqlite3'
+    #     dsn = '/sqlite3.'
+    #     maxIdle = 1
+    #     maxConn = 1
+    #     idleTimeout = '1h'
+
+[redis]
+    use = false
+    # [redis.default]
+    #     name = "zddgo-default"
+    #     #dsn = "127.0.0.1:6379;127.0.0.2:6379"
+    #     dsn = "127.0.0.1:6379;127.0.0.1:6379"
+    #     pwd = ""
+    #     db = 0
+    #     maxIdle = 1
+    #     maxActive = 1
+    #     idleTimeout = "10s"
+    #     connectTimeout = "1s"
+    #     readTimeout = "1s"
+    #     writeTimeout = "1s"
+    # [[redis.connection]]
+    #     name = "zddgo-redis1"
+    #     #dsn = "127.0.0.1:6379;127.0.0.2:6379"
+    #     dsn = "127.0.0.1:6379"
+    #     pwd = ""
+    #     db = 0
+    #     maxIdle = 1
+    #     maxActive = 1
+    #     idleTimeout = "10s"
+    #     connectTimeout = "1s"
+    #     readTimeout = "1s"
+    #     writeTimeout = "1s"
+    # [[redis.connection]]
+    #     name = "zddgo-redis2"
+    #     #dsn = "127.0.0.1:6379;127.0.0.2:6379"
+    #     dsn = "127.0.0.1:6380"
+    #     pwd = ""
+    #     db = 0
+    #     maxIdle = 1
+    #     maxActive = 1
+    #     idleTimeout = "10s"
+    #     connectTimeout = "1s"
+    #     readTimeout = "1s"
+    #     writeTimeout = "1s"
+#
+#end

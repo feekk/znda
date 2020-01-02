@@ -6,9 +6,9 @@
 
 ## 模块描述
 
-base-service-auth 鉴权服务，用于生成token及验证
+base-service-passport 鉴权服务，用于生成token及验证
 
-base-service-connection 长连接服务
+base-service-conn 长连接服务
 
 base-service-discover 服务发现
 
@@ -16,13 +16,13 @@ base-service-gateway 网关服务
 
 base-service-lbs 位置服务
 
-base-service-push 触达服务。短信、端内外推送等
+base-service-message 触达服务。短信、端内外推送等
 
-bussiness-client-driver 司机端API及逻辑服务
+bussiness-api-driver 司机端API及逻辑服务
 
-bussiness-client-mis 内部管理服务
+bussiness-api-mis 内部管理服务
 
-bussiness-client-passenger 乘客端API及逻辑服务
+bussiness-api-passenger 乘客端API及逻辑服务
 
 bussiness-service-bill 账单服务
 
